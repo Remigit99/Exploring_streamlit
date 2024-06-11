@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-price_table = pd.DataFrame({"Item": ["Laptop", "Phone", "Shoe", "Shirt", "TV"], "Price": [560000, 303000, 15000, 12000, 607000]}, index=None)
+price_table = pd.DataFrame({"Item": ["Laptop", "Phone", "Shoe", "Shirt", "TV"], "Price": [560000, 303000, 15000, 12000, 607000]})
 
 st.title('Caesar Cipher')
 
@@ -37,7 +37,11 @@ st.title('Caesar Cipher')
 
 ### Creating Table with Streamlit
 
-st.table(price_table)
+# st.table(price_table)
+# st.dataframe(price_table)         ----#Sortable, downloadable table
+
+st.image("./assets/product4.png", caption="Nike Shoe",width=96)
+st.image("./assets/product5.png", caption="Nike Shoe 2",width=96)
 
 input_txt = st.text_area('Enter text to be encrypted:')
 
